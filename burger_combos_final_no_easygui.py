@@ -4,20 +4,25 @@ as well as while loops, however loop only ends when user decides to
 exit the program"""
 # List of each combo meal and price for each
 combo_menu = {
-    'Combo 1 = Value': {'items': ['Beef Burger', 'Fries', 'Fizzy Drink'], 'price': 6.69},
-    'Combo 2 = Cheesy': {'items': ['Cheese Burger', 'Fries', 'Fizzy Drink'], 'price': 8.69},
-    'Combo 3 = Super': {'items': ['Cheese Burger', 'Large Fries', 'Smoothie'], 'price': 10.69}
+    'Value':
+        {'items': {'Beef Burger', 'Fries', 'Fizzy Drink'}, 'price': 6.69},
+    'Cheesy':
+        {'items': {'Cheese Burger', 'Fries', 'Fizzy Drink'}, 'price': 8.69},
+    'Super':
+        {'items': {'Cheese Burger', 'Large Fries', 'Smoothie'}, 'price': 10.69}
 }
 
 
-# Allows the user to add combo wanted as well as asking if the new combo input has the correct info
+# Allows the user to add combo wanted as well as asking if the new combo
+# input has the correct info
 def add_combo():
     name = input("Hello! Please enter the name of the new combo: ")
-    items = input("Please enter the items in the combo, separated by commas (,): ").split(',')
+    items = input("Please enter the items in the combo, separated "
+                  "by commas (,): ").split(',')
     price = float(input("Please enter the price of the new combo: "))
     combo_menu[name] = {'items': items, 'price': price}
     print("New combo added!:", combo_menu[name])
-    confirm = input("Is this information correct? (yes/no): ").upper()
+    confirm = input("Is this information correct? (yes/no): ").lower()
     if confirm.lower() == 'no':
         add_combo()
 
@@ -25,18 +30,22 @@ def add_combo():
 # Allows the user to search for a combo already from the list
 def search_combo():
     name = input("Enter the name of the combo to search: ")
-    if name in combo_menu:
-        print("Combo found = ", combo_menu[name])
-        confirm = input("Is this information correct? (yes/no): ").upper()
-        if confirm.lower() == 'no':
-            update_combo(name)
-    else:
-        print("Combo not found.")
+    for combo_name, combo_info in combo_menu.items():
+        if name.lower() == combo_name.lower():
+            found = True
+            print("Combo found = ", {combo_name})
+            for key, value in combo_info.items():
+                print(f'{key}: {value}"')
+            confirm = input("Is this information correct? (yes/no): ").lower()
+            if confirm.lower() == 'no':
+                update_combo(name)
+    print("Combo not found.")
 
 
 # Updates the list and adds the new combo from the user
 def update_combo(name):
-    items = input("Enter the new items for the combo separated by commas: ").split(',')
+    items = input("Enter the new items for the combo separated "
+                  "by commas: ").split(',')
     price = float(input("Enter the new price for the combo: "))
     combo_menu[name] = {'items': items, 'price': price}
     print("Combo updated:", combo_menu[name])

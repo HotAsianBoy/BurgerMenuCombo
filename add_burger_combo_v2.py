@@ -4,7 +4,15 @@ before added the new combo to the menu, using more formal language and being mor
 welcoming and inclusive to allow the user to feel more relaxed
 if they have never used code before
 """
-
+# List of each combo meal and price for each
+combo_menu = {
+    'Value':
+        {'items': {'Beef Burger', 'Fries', 'Fizzy Drink'}, 'price': 6.69},
+    'Cheesy':
+        {'items': {'Cheese Burger', 'Fries', 'Fizzy Drink'}, 'price': 8.69},
+    'Super':
+        {'items': {'Cheese Burger', 'Large Fries', 'Smoothie'}, 'price': 10.69}
+}
 
 # Allows the user to add a new combo wanted as well as asking if the new combo input has the correct info
 def add_combo():
@@ -16,3 +24,4 @@ def add_combo():
     confirm = input("Is this information correct? (yes/no): ").upper()
     if confirm.lower() == 'no':
         add_combo()
+add_combo()
