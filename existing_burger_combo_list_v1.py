@@ -1,4 +1,4 @@
-"""Burger Combos v1
+"""Existing Burger Combo List v1
 Simple input and print of dictionaries (list)"""
 
 
@@ -16,4 +16,3 @@ for combo, items in combo_menu.items():
     for item, price in items:
         print(f"{item} = ${price:.2f}")
     print()  # Print spare line
-

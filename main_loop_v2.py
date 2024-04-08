@@ -1,11 +1,11 @@
-"""Main v3
-Added extra aesthetics to ensure an effective and simple program
-for the user"""
+"""Main Loop v2
+Edited the main loop so it looks more eye-catching and pleasing to
+the eye"""
 
 
 # Main loop
 while True:
-    print("\n*** Welcome! What would you like to do today? ***\nOptions:")
+    print("\nOptions:")
     print("****************************************")
     print("1 - Add a new combo meal")
     print("2 - Search for an existing combo meal")
@@ -13,7 +13,7 @@ while True:
     print("4 - Display the full menu")
     print("5 - Exit")
     print("****************************************")
-    choice = input("Please choose an option: ")
+    choice = input("Choose an option: ")
 
     if choice == '1':
         add_combo()

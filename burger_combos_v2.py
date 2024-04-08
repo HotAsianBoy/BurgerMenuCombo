@@ -1,2 +1,0 @@
-"""Burger Combos v2
-"""

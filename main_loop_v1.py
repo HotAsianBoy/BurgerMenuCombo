@@ -1,4 +1,4 @@
-"""Main v1
+"""Main Loop v1
 The main loop for that allows the user to add, search, delete, and the display
 the menu or exit the program"""
 
