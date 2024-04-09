@@ -3,9 +3,9 @@ Allows the user to add new combos to the menu.
 """
 # List of each combo meal and price for each, being a dictionary to store the combo meals with their details
 combo_menu = {
-    'Value': {'items': {'Beef Burger', 'Fries', 'Fizzy Drink'}, 'price': 6.69},
-    'Cheesy': {'items': {'Cheese Burger', 'Fries', 'Fizzy Drink'}, 'price': 8.69},
-    'Super': {'items': {'Cheese Burger', 'Large Fries', 'Smoothie'}, 'price': 10.69}
+    'Value': {'Items': {'Beef Burger', 'Fries', 'Fizzy Drink'}, 'Price': 6.69},
+    'Cheesy': {'Items': {'Cheese Burger', 'Fries', 'Fizzy Drink'}, 'Price': 8.69},
+    'Super': {'Items': {'Cheese Burger', 'Large Fries', 'Smoothie'}, 'Price': 10.69}
 }
 
 # Allows the user to add a new combo

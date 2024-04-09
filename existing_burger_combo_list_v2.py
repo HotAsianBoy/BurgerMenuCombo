@@ -4,8 +4,8 @@ as it will work simply as a dictionary at the start of the main program"""
 
 # List of each combo meal and price for each, being a dictionary to store the combo meals with their details
 combo_menu = {
-    'Combo 1 = Value': {'items': {'Beef Burger', 'Fries', 'Fizzy Drink'}, 'price': 6.69},
-    'Combo 2 = Cheesy': {'items': {'Cheese Burger', 'Fries', 'Fizzy Drink'}, 'price': 8.69},
-    'Combo 3 = Super': {'items': {'Cheese Burger', 'Large Fries', 'Smoothie'}, 'price': 10.69}
+    'Value': {'Items': {'Beef Burger', 'Fries', 'Fizzy Drink'}, 'Price': 6.69},
+    'Cheesy': {'Items': {'Cheese Burger', 'Fries', 'Fizzy Drink'}, 'Price': 8.69},
+    'Super': {'Items': {'Cheese Burger', 'Large Fries', 'Smoothie'}, 'Price': 10.69}
 }
 print(combo_menu)

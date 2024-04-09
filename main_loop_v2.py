@@ -1,6 +1,7 @@
 """Main Loop v2
 Edited the main loop so it looks more eye-catching and pleasing to
-the eye"""
+the eye
+"""
 
 
 # Main loop

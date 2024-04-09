@@ -1,6 +1,9 @@
-"""Search Burger Combo v2
-Fixed error of search burger combo v1 combo not showing
-up
+"""Search Burger Combo v3
+Used more formal and inviting language during code
+to allow the user to have and flowing and ease experience,
+and used the variable update_combo(name), which
+will loop the search combo without printing "Combo
+Not Found", and will function once put into the main program
 """
 
 
@@ -17,15 +20,15 @@ combo_menu = {
 
 # Allows the user to search for a combo already from the list
 def search_combo():
-    name = input("Enter the name of the combo to search: ")
+    name = input("Hello! Please enter the name of the combo to search: ")
     for combo_name, combo_info in combo_menu.items():
         if name.lower() == combo_name.lower():
-            print("Combo found = ", {combo_name})
+            print("This combo was found! = ", {combo_name})
             for key, value in combo_info.items():
                 print(f'{key}: {value} "')
             confirm = input("Is this information correct? (yes/no): ").lower()
             if confirm.lower() == 'no':
-                search_combo()
-    print("Combo not found.")
+                update_combo(name)
+    print("Sorry, this combo was not found.")
 
 search_combo()

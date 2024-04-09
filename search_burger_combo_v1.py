@@ -6,11 +6,11 @@ from the menu list"""
 # List of each combo meal and price for each
 combo_menu = {
     'Value':
-        {'items': ['Beef Burger', 'Fries', 'Fizzy Drink'], 'price': 6.69},
+        {'Items': ['Beef Burger', 'Fries', 'Fizzy Drink'], 'Price': 6.69},
     'Cheesy':
-        {'items': ['Cheese Burger', 'Fries', 'Fizzy Drink'], 'price': 8.69},
+        {'Items': ['Cheese Burger', 'Fries', 'Fizzy Drink'], 'Price': 8.69},
     'Super':
-        {'items': ['Cheese Burger', 'Large Fries', 'Smoothie'], 'price': 10.69}
+        {'Items': ['Cheese Burger', 'Large Fries', 'Smoothie'], 'Price': 10.69}
 }
 
 
@@ -22,10 +22,12 @@ def search_combo():
             found = True
             print("Combo found = ", {combo_name})
             for key, value in combo_info.items():
-                print(f'{key}: {value}"')
+                print(f'{key}: {value} "')
         confirm = input("Is this information correct? (yes/no): ").lower()
         if confirm.lower() == 'no':
             update_combo(name)
             found = False
     else:
         print("Combo not found.")
+
+search_combo()

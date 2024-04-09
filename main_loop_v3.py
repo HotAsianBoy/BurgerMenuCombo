@@ -1,7 +1,8 @@
 """Main Loop v3
 Added extra aesthetics to ensure an effective and simple program
 for the user, including welcome speech during start of program to
-allow user to feel more relaxed and easier use"""
+allow user to feel more relaxed and easier use
+"""
 
 
 # Main loop
