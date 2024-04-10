@@ -64,8 +64,8 @@ def delete_combo():
 def print_menu():
     print("Full Combo Menu:")
     for name, details in combo_menu.items():
-        items_str = ', '.join(details['items'])
-        print(f"{name}: {items_str} - ${details['price']}")
+        items_str = ', '.join(details['Items'])
+        print(f"{name}: {items_str} - ${details['Price']}")
 
 
 # Main loop
