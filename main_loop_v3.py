@@ -3,8 +3,6 @@ Added extra aesthetics to ensure an effective and simple program
 for the user, including welcome speech during start of program to
 allow user to feel more relaxed and easier use
 """
-
-
 # Main loop
 while True:
     print("\n*** Welcome! What would you like to do today? ***\nOptions:")
