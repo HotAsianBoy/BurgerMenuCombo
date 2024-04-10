@@ -13,4 +13,13 @@ combo_menu = {
 }
 
 
-easygui.msgbox(combo_menu)
+# Allows the user to see the full menu list after editing or observing
+def print_menu():
+    easygui.msgbox("Full Combo Menu:")
+    for name, details in combo_menu.items():
+        items_str = ', '.join(details['Items'])
+        easygui.msgbox(f"{name}: {items_str} - ${details['Price']}",
+                title="Gideon's Burger Menu!")
+
+
+print_menu()

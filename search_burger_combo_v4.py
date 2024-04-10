@@ -1,21 +1,15 @@
-"""Search Burger Combo Easygui
-Added easygui into the completed search burger
-combo code, which allows the user to search for
-an existing combo"""
+"""Search Burger Combo v4
+Added Easygui, and fixed error where if the user
+says the information is correct it would say combo
+not found by looping the program"""
 import easygui
 
-
-# List of each combo meal and price for each
+# List of each combo meal and price for each, being a dictionary to store the combo meals with their details
 combo_menu = {
-    'Value':
-        {'Items': ['Beef Burger', 'Fries', 'Fizzy Drink'], 'Price': 6.69},
-    'Cheesy':
-        {'Items': ['Cheese Burger', 'Fries', 'Fizzy Drink'], 'Price': 8.69},
-    'Super':
-        {'Items': ['Cheese Burger', 'Large Fries', 'Smoothie'], 'Price': 10.69},
+    'Value': {'Items': {'Beef Burger', 'Fries', 'Fizzy Drink'}, 'Price': 6.69},
+    'Cheesy': {'Items': {'Cheese Burger', 'Fries', 'Fizzy Drink'}, 'Price': 8.69},
+    'Super': {'Items': {'Cheese Burger', 'Large Fries', 'Smoothie'}, 'Price': 10.69}
 }
-
-
 # Allows the user to search for a combo already on the list
 def search_combo():
     while True:  # Start of the loop
