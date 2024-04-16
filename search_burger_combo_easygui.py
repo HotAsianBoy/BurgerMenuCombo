@@ -37,4 +37,5 @@ def search_combo():
             easygui.msgbox("Sorry, this combo was not found. Please try again.")
             # Loop will continue, asking the question again
 
+
 search_combo()

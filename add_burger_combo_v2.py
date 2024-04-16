@@ -14,14 +14,22 @@ combo_menu = {
         {'Items': {'Cheese Burger', 'Large Fries', 'Smoothie'}, 'Price': 10.69}
 }
 
+
 # Allows the user to add a new combo wanted as well as asking if the new combo input has the correct info
 def add_combo():
-    name = input("Hello! Please enter the name of the new combo: ")
-    items = input("Please enter the items in the combo, separated by commas (,): ").split(',')
-    price = float(input("Please enter the price of the new combo: "))
-    combo_menu[name] = {'items': items, 'price': price}
-    print("New combo added!:", combo_menu[name])
-    confirm = input("Is this information correct? (yes/no): ").upper()
-    if confirm.lower() == 'no':
-        add_combo()
+    while True:
+        name = input("Hello! Please enter the name of the new combo: ")
+        items = input("Please enter the items in the combo, separated by commas (,): ").split(',')
+        price = float(input("Please enter the price of the new combo ($): "))
+        combo_menu[name] = input(f"{name} = {items}, = ${price}")
+        print("New combo added!:", combo_menu[name])
+        confirm = input("Is this information correct? (yes/no): ").upper()
+        if confirm.lower() == 'yes':
+            print(f"New Combo Saved!: {combo_menu[name]}")
+        elif confirm.lower() == "no":
+            add_combo()
+        else:
+            print("Invalid Output.")
+
+
 add_combo()

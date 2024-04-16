@@ -19,8 +19,8 @@ def add_combo():
     name = input("Hello! Please enter the name of the new combo: ")
     items = input("Please enter the items in the combo, separated "
                   "by commas (,): ").split(',')
-    price = float(input("Please enter the price of the new combo: "))
-    combo_menu[name] = {'items': items, 'price': price}
+    price = float(input("Please enter the price of the new combo ($): "))
+    combo_menu[name] = input(f"{name} = {items}, = {price}")
     print("New combo added!:", combo_menu[name])
     confirm = input("Is this information correct? (yes/no): ").lower()
     if confirm.lower() == 'no':
@@ -89,7 +89,7 @@ while True:
     elif choice == '4':
         print_menu()
     elif choice == '5':
-        print("Exiting program.")
+        print("Thank you and farewell! Exiting program.")
         break
     else:
         print("Invalid option. Please try again.")

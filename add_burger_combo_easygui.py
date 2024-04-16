@@ -16,16 +16,24 @@ combo_menu = {
 }
 
 
-# Allows the user to add a new combo wanted as well as asking if the new combo input has the correct info
+# Allows the user to add a new combo wanted as well
+# as asking if the new combo input has the correct info
 def add_combo():
-    name = easygui.enterbox("Hello! Please enter the name of the new combo: ")
-    items = easygui.enterbox("Please enter the items in the combo, separated by commas (,): ").split(',')
-    price = float(easygui.enterbox("Please enter the price of the new combo: "))
-    combo_menu[name] = {'items': items, 'price': price}
-    easygui.msgbox("New combo added!:", combo_menu[name])
-    confirm = easygui.buttonbox(("Is this information correct? (yes/no): "), choices=['Yes', 'No'])
-    if confirm.lower() == 'No':
-        add_combo()
+    while True:
+        name = easygui.enterbox("Hello! Please enter the name of the new combo: ")
+        items = easygui.enterbox("Please enter the items in "
+                                 "the combo, separated by commas (,): ").split(',')
+        price = float(easygui.enterbox("Please enter the price of the new combo ($): "))
+        combo_menu[name] = easygui.msgbox(f"{name} = {items}, = {price}")
+        easygui.msgbox("New combo added!:", combo_menu[name])
+        confirm = easygui.buttonbox("Is this information "
+                                    "correct? (yes/no): ", choices=['Yes', 'No'])
+        if confirm.lower() == 'yes':
+            easygui.msgbox("New Combo Saved!:", combo_menu[name])
+        elif confirm.lower() == "no":
+            add_combo()
+        else:
+            easygui.msgbox("Invalid Output. Please try again.")
 
 
 add_combo()
