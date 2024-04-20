@@ -18,9 +18,11 @@ combo_menu = {
 # as asking if the new combo input has the correct info
 def add_combo():
     while True:
-        name = easygui.enterbox("Hello! Please enter the name of the new combo: ")
+        name = easygui.enterbox("Hello! Please enter the name of the new combo: ",
+                                title="Gideon's Burgers!")
         items = easygui.enterbox("Please enter the items in "
-                                 "the combo, separated by commas (,): ").split(',')
+                                 "the combo, separated by commas (,): ",
+                                 title="Gideon's Burgers!").split(',')
         price = float(easygui.enterbox("Please enter the price of the new combo ($): "))
         combo_menu[name] = easygui.msgbox(f"{name} = {items}, = {price}")
         easygui.msgbox("New combo added!:", combo_menu[name])
@@ -32,6 +34,7 @@ def add_combo():
             add_combo()
         else:
             easygui.msgbox("Invalid Output. Please try again.")
+        break
 
 
 # Allows the user to search for a combo already on the list

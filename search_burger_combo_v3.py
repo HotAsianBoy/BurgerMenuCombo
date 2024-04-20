@@ -28,7 +28,7 @@ def search_combo():
                 print(f'{key}: {value} "')
             confirm = input("Is this information correct? (yes/no): ").lower()
             if confirm.lower() == 'no':
-                update_combo(name)
+                search_combo()
     print("Sorry, this combo was not found.")
 
 search_combo()

@@ -17,12 +17,13 @@ combo_menu = {
 
 # Allows the user to delete a combo if necessary
 def delete_combo():
-    name = input("Hello! Please enter the name of the combo to delete: ")
-    if name in combo_menu:
-        del combo_menu[name]
-        print(f"Success! {name} has been deleted from the menu!")
-    else:
-        print("Sorry, this combo was not found.")
+    while True:
+        name = input("Hello! Please enter the name of the combo to delete: ")
+        if name in combo_menu:
+            del combo_menu[name]
+            print(f"Success! {name} has been deleted from the menu!")
+        else:
+            print("Sorry, this combo was not found. Please try again.")
 
 
 delete_combo()

@@ -18,12 +18,13 @@ combo_menu = {
 
 # Allows the user to delete a combo if necessary
 def delete_combo():
-    name = easygui.enterbox("Hello! Please enter the name of the combo to delete: ")
-    if name in combo_menu:
-        del combo_menu[name]
-        easygui.msgbox(f"Success! {name} has been deleted from the menu!")
-    else:
-        easygui.msgbox("Sorry, this combo was not found.")
+    while True:
+        name = easygui.enterbox("Hello! Please enter the name of the combo to delete: ")
+        if name in combo_menu:
+            del combo_menu[name]
+            easygui.msgbox(f"Success! {name} has been deleted from the menu!")
+        else:
+            easygui.msgbox("Sorry, this combo was not found. Please try again.")
 
 
 delete_combo()
