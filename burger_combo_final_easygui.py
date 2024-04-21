@@ -23,7 +23,8 @@ def add_combo():
         items = easygui.enterbox("Please enter the items in "
                                  "the combo, separated by commas (,): ",
                                  title="Gideon's Burgers!").split(',')
-        price = float(easygui.enterbox("Please enter the price of the new combo ($): "))
+        price = float(easygui.enterbox("Please enter the price of the"
+                                       " new combo ($): "))
         combo_menu[name] = easygui.msgbox(f"{name} = {items}, = {price}")
         easygui.msgbox("New combo added!:", combo_menu[name])
         confirm = easygui.buttonbox("Is this information "
@@ -47,14 +48,18 @@ def search_combo():
 
         for combo_name, combo_info in combo_menu.items():
             if name.lower() == combo_name.lower():
-                combo_details = f"Items: {', '.join(combo_info['Items'])}\nPrice: ${combo_info['Price']}"
-                easygui.msgbox(f"This combo was found! = \n{combo_name}\n{combo_details}")
+                combo_details = f"Items: {', '.join(combo_info['Items'])}\n" \
+                                f"Price: ${combo_info['Price']}"
+                easygui.msgbox(f"This combo was found!"
+                               f" = \n{combo_name}\n{combo_details}")
                 combo_found = True
-                confirm = easygui.buttonbox("Is this information correct?", choices=['Yes', 'No'])
+                confirm = easygui.buttonbox("Is this information "
+                                            "correct?", choices=['Yes', 'No'])
                 if confirm == 'Yes':
                     return  # If information is correct, exit the function
                 else:
-                    break  # Breaks out of the for loop, goes back to start of while loop
+                    break  # Breaks out of the for loop, goes
+                    # back to start of while loop
 
         if not combo_found:
             easygui.msgbox("Sorry, this combo was not found. Please try again.")
@@ -85,7 +90,8 @@ def print_menu():
 while True:
     choice = easygui.buttonbox("***Welcome to Gideon's Burgers!***\n "
                                "How Can I Help You?",
-                               choices=["Add Combo", "Search Combo", "Delete Combo",
+                               choices=["Add Combo", "Search"
+                                                     " Combo", "Delete Combo",
                                         "Print Menu", "Exit"],
                                title="Gideon's Burgers!")
 
